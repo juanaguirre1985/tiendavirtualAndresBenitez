@@ -1,0 +1,116 @@
+/* pagina_principal.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #28a745; /* Fondo verde para el encabezado */
+    color: white;
+    padding: 12px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Alineamos el logo y el eslogan verticalmente */
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    text-align: center;
+    font-size: 2.5em;
+    animation: logoAnimation 4s ease-out;
+}
+
+#slogan {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+    animation: sloganAnimation 4s ease-out;
+}
+
+@keyframes logoAnimation {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sloganAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #28a745; /* Color del texto en el menú */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Color al pasar el mouse */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples líneas */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-content: center; /* Centra las imágenes en el contenedor */
+}
+
+.gallery-item {
+    flex: 1 0 21%; /* Ajusta el tamaño de cada imagen. Puedes cambiar el porcentaje según necesites */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+}
+
+.gallery-item img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 8px; /* Bordes redondeados opcionalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para destacar las imágenes */
+}
+
+footer {
+    background-color: #2d77e6;
+    color: rgb(2, 5, 14);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

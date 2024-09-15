@@ -1,0 +1,163 @@
+/* carrito.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 0;
+    position: relative;
+    z-index: 1000; /* Asegúrate de que el encabezado esté sobre otros elementos */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 1;
+}
+
+nav {
+    flex: 1;
+    text-align: center; /* Centra los elementos del menú en pantallas pequeñas */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en pantallas pequeñas */
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente en pantallas pequeñas */
+    gap: 20px;
+}
+
+#cart-items {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+}
+
+#cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-items th, #cart-items td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#cart-items th {
+    background-color: #f2f2f2;
+}
+
+.cart-summary {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    max-width: 400px; /* Máximo ancho en pantallas grandes */
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+}
+
+.cart-summary p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Botón de ancho completo en pantallas pequeñas */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    #cart-items {
+        width: 70%; /* Ajuste para pantallas medianas */
+    }
+
+    .cart-summary {
+        width: 100%; /* Ancho completo para pantallas medianas y pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+    }
+
+    #cart-items {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+
+    .cart-summary {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column; /* Apilar el logo y el menú en pantallas muy pequeñas */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espacio entre elementos del menú en pantallas muy pequeñas */
+    }
+
+    button {
+        font-size: 14px; /* Ajustar el tamaño del botón en pantallas muy pequeñas */
+    }
+}
